@@ -1,0 +1,121 @@
+.sec-players {
+    min-height: 100vh;
+    
+    .sec-title {
+        font-family: 'Lobster', cursive;
+        color: #FFF;
+        text-align: center;
+        font-size: 48px;
+        margin: 50px 0 0;
+    }
+
+    .sec-intro {
+        font-size: 16px;
+        color: #FFF;
+        text-align: center;
+        margin: 25px 0 50px;
+        line-height: 1.5;
+    }
+
+    .bt-add-player {
+        background-color: #da0942;
+        color: #FFF;
+        margin: 20px auto 0;
+    }
+
+    .bt-start {
+        margin: 20px auto 0;
+        background-color: #da0942;
+        color: #FFF;
+    }
+
+    .alert {
+        
+        b {
+            font-weight: 600;
+        }
+
+        display: none;
+        text-align: center;
+        background-color: rgba(#da0942, .5);
+        padding: 10px;
+        color: #FFF;
+        border: 2px solid #da0942;
+    }
+}
+
+.sec-verdade-desafio {
+    display: none;
+    min-height: 100vh;
+
+    .sec-title {
+        text-align: center;
+        color: #FFF;
+        font-weight: 400;
+        margin: 50px 0 0;
+
+        span {
+            text-transform: uppercase;
+        }
+
+        span, b {
+            font-weight: 600;
+        }
+    }
+
+    .btn {
+        min-width: 171.03px;
+    }
+
+    .bt-verdade {
+        background-color: #da0942;
+        color: #FFF;
+        margin: 20px auto 0;
+    }
+
+    .bt-desafio {
+        background-color: #da0942;
+        color: #FFF;
+        margin: 20px auto 0;
+    }
+}
+
+.sec-pergunta {
+    display: none;
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .sec-title {
+        font-size: 48px;
+        color: #FFF;
+        text-align: center;
+    }
+
+    .bt-sortear {
+        background-color: #da0942;
+        color: #FFF;
+    }
+}
+
+.sec-share-btns {
+    .sec-title {
+        color: #FFF;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 30px 0;
+    }
+    .share-btns {
+        display: flex;
+        justify-content: space-evenly;
+        a {
+            text-decoration: none;
+            color: #da0942;
+
+        }
+    }
+}
