@@ -11,6 +11,8 @@
   let btDesafio = document.getElementById('btDesafio');
   let difficulty = "facil";
 
+  console.log('Initial difficulty:', difficulty);
+
   // ADICIONA MAIS CAMPOS DE JOGADORES NO FORMULÁRIO
   btAddPlayer.addEventListener('click', () => {
     let input = document.querySelector('.input-group').cloneNode(true);
@@ -80,15 +82,18 @@
 
     fetch("./questions.json") 
     .then(response => {
+      console.log('Fetch response:', response);
       return response.json();
     })
     .then(data => {
+      console.log('Fetched data:', data);
+      console.log('Selected difficulty:', difficulty);
         const random = Math.floor(Math.random() * data.verdades[difficulty].length);
         const DOMText = document.querySelector('.sec-pergunta .sec-title');
         
-        return DOMText.innerHTML = data.verdades[difficulty][random];
-      }            
-    );
+        DOMText.innerHTML = data.verdades[difficulty][random];
+      })
+    .catch(error => console.error('Error fetching verdades:', error));
 
   });
 
@@ -100,28 +105,34 @@
 
     fetch("./questions.json") 
     .then(response => {
+      console.log('Fetch response:', response);
       return response.json();
     })
     .then(data => {
+      console.log('Fetched data:', data);
+      console.log('Selected difficulty:', difficulty);
         const random = Math.floor(Math.random() * data.desafios[difficulty].length);
         const DOMText = document.querySelector('.sec-pergunta .sec-title');
         
-        return DOMText.innerHTML = data.desafios[difficulty][random];
-      }            
-    );
+        DOMText.innerHTML = data.desafios[difficulty][random];
+      })
+    .catch(error => console.error('Error fetching desafios:', error));
   });
 
   // SELECIONA DIFICULDADE
   document.getElementById('btFacil').addEventListener('click', () => {
     difficulty = "facil";
+    console.log('Difficulty set to facil');
   });
   
   document.getElementById('btMedio').addEventListener('click', () => {
     difficulty = "medio";
+    console.log('Difficulty set to medio');
   });
 
   document.getElementById('btDificil').addEventListener('click', () => {
     difficulty = "dificil";
+    console.log('Difficulty set to dificil');
   });
 
   // REALIZA UM NOVO SORTEIO
