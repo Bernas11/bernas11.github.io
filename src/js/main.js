@@ -1,5 +1,4 @@
 (function () {
-
   let btAddPlayer = document.getElementById('btAddPlayer');
   let btStart = document.getElementById('btStart');
   let btSortear = document.getElementById('btSortear');
@@ -10,8 +9,6 @@
   let btVerdade = document.getElementById('btVerdade');
   let btDesafio = document.getElementById('btDesafio');
   let difficulty = "facil";
-
-  console.log('Initial difficulty:', difficulty);
 
   // ADICIONA MAIS CAMPOS DE JOGADORES NO FORMULÁRIO
   btAddPlayer.addEventListener('click', () => {
@@ -82,17 +79,18 @@
 
     fetch("./questions.json") 
     .then(response => {
-      console.log('Fetch response:', response);
       return response.json();
     })
     .then(data => {
-      console.log('Fetched data:', data);
-      console.log('Selected difficulty:', difficulty);
+      if(data.verdades[difficulty]) {
         const random = Math.floor(Math.random() * data.verdades[difficulty].length);
         const DOMText = document.querySelector('.sec-pergunta .sec-title');
         
         DOMText.innerHTML = data.verdades[difficulty][random];
-      })
+      } else {
+        console.error('Difficulty level not found for verdades');
+      }
+    })
     .catch(error => console.error('Error fetching verdades:', error));
 
   });
@@ -105,17 +103,18 @@
 
     fetch("./questions.json") 
     .then(response => {
-      console.log('Fetch response:', response);
       return response.json();
     })
     .then(data => {
-      console.log('Fetched data:', data);
-      console.log('Selected difficulty:', difficulty);
+      if(data.desafios[difficulty]) {
         const random = Math.floor(Math.random() * data.desafios[difficulty].length);
         const DOMText = document.querySelector('.sec-pergunta .sec-title');
         
         DOMText.innerHTML = data.desafios[difficulty][random];
-      })
+      } else {
+        console.error('Difficulty level not found for desafios');
+      }
+    })
     .catch(error => console.error('Error fetching desafios:', error));
   });
 
