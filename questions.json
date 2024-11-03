@@ -1,13 +1,14 @@
 {
-    "verdades": {
-      "facil": ["Verdade fácil 1", "Verdade fácil 2"],
-      "medio": ["Verdade média 1", "Verdade média 2"],
-      "dificil": ["Verdade difícil 1", "Verdade difícil 2"]
-    },
-    "desafios": {
-      "facil": ["Desafio fácil 1", "Desafio fácil 2"],
-      "medio": ["Desafio médio 1", "Desafio médio 2"],
-      "dificil": ["Desafio difícil 1", "Desafio difícil 2"]
-    }
+  "verdades": {
+    "facil": ["Verdade fácil 1", "Verdade fácil 2"],
+    "medio": ["Verdade média 1", "Verdade média 2"],
+    "dificil": ["Verdade difícil 1", "Verdade difícil 2"]
+  },
+  "desafios": {
+    "facil": ["Desafio fácil 1", "Desafio fácil 2"],
+    "medio": ["Desafio médio 1", "Desafio médio 2"],
+    "dificil": ["Desafio difícil 1", "Desafio difícil 2"]
   }
+}
+
   
