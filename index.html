@@ -71,11 +71,11 @@
 
             <div class="difficulty-selection">
                 <label for="facil">Fácil</label>
-                <input type="checkbox" id="facil" name="facil" value="facil">
+                <input type="radio" id="facil" name="difficulty" value="facil" checked>
                 <label for="medio">Médio</label>
-                <input type="checkbox" id="medio" name="medio" value="medio">
+                <input type="radio" id="medio" name="difficulty" value="medio">
                 <label for="dificil">Difícil</label>
-                <input type="checkbox" id="dificil" name="dificil" value="dificil">
+                <input type="radio" id="dificil" name="difficulty" value="dificil">
             </div>
 
             <button type="button" class="btn bt-add-player" id="btAddPlayer">
@@ -152,6 +152,11 @@
     <script src="dist/js/vendor/modernizr-3.11.2.min.js"></script>
     <script src="dist/js/plugins.min.js"></script>
     <script src="dist/js/font-awesome.min.js" crossorigin="anonymous"></script>
-    <script src="dist/js/main.min.js"></script>
-</body>
-</html>
+    <script>
+    (function () {
+        let btAddPlayer = document.getElementById('btAddPlayer');
+        let btStart = document.getElementById('btStart');
+        let btSortear = document.getElementById('btSortear');
+        let players = [];
+        let secPlayers = document.querySelector('.sec-players');
+        let secVerdadeDes
