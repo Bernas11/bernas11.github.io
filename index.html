@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Verdade ou Desafio</title>
+    <meta name="description" content="Jogo de Verdade ou Desafio online.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Verdade ou Desafio">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="URL_DO_SEU_SITE">
+    <meta property="og:image" content="URL_DA_IMAGEM">
+
+    <!-- Favicon and Manifest -->
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="icon" href="icon.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="dist/css/main.min.css">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#2c3e50">
+
+    <!-- Google Ads Script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4475699704469299" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="./" aria-label="Voltar ao início">
+            <i class="fa-solid fa-arrow-rotate-left fa-2x"></i>
+        </a>
+        <a href="https://github.com/mateusdanieel" target="_blank" rel="noopener noreferrer" aria-label="Link para GitHub">
+            <i class="fa-brands fa-github fa-2x"></i>
+        </a>
+    </nav>
+
+    <section class="sec-players">
+        <div class="container">
+            <h1 class="sec-title">Verdade ou Desafio?</h1>
+            <p class="sec-intro">
+                Essa brincadeira também é conhecida como <b>Verdade ou Consequência</b> ou <b>Jogo da Garrafa</b>. As regras são simples: o jogador sorteado deve escolher se prefere <b>"Verdade"</b> ou <b>"Desafio"</b>. Se escolher <b>"Verdade"</b>, o jogador terá que responder a pergunta exibida. Caso escolha <b>"Desafio"</b>, o jogador terá que executar a consequência exibida.
+            </p>
+
+            <div class="wrap">
+                <div class="input-group">
+                    <select class="gender-select" aria-label="Gênero do jogador" style="margin-right: 10px;">
+                        <option value="M"><i class="fa-solid fa-mars" style="color: #0066ff;"></i> ♂</option>
+                        <option value="F"><i class="fa-solid fa-venus" style="color: #ff69b4;"></i> ♀</option>
+                    </select>
+                    <input type="text" class="player-name" placeholder="Jogador(a)" maxlength="20" aria-label="Nome do jogador">
+                </div>
+                <div class="input-group">
+                    <select class="gender-select" aria-label="Gênero do jogador" style="margin-right: 10px;">
+                        <option value="M"><i class="fa-solid fa-mars" style="color: #0066ff;"></i> ♂</option>
+                        <option value="F"><i class="fa-solid fa-venus" style="color: #ff69b4;"></i> ♀</option>
+                    </select>
+                    <input type="text" class="player-name" placeholder="Jogador(a)" maxlength="20" aria-label="Nome do jogador">
+                </div>
+            </div>
+
+            <span class="alert"></span>
+
+            <div class="difficulty-selection">
+                <label for="facil">Fácil</label>
+                <input type="checkbox" id="facil" name="facil" value="facil">
+                <label for="dificil">Difícil</label>
+                <input type="checkbox" id="dificil" name="dificil" value="dificil">
+            </div>
+
+            <button type="button" class="btn bt-add-player" id="btAddPlayer">
+                <i class="fa-solid fa-plus"></i> Adicionar mais Jogadores
+            </button>
+            <button type="button" class="btn bt-start" id="btStart">
+                <i class="fa-solid fa-play"></i> Começar o Jogo
+            </button>
+        </div>
+    </section>
+
+    <section class="sec-verdade-desafio">
+        <div class="container">
+            <h2 class="sec-title">
+                <span id="playerName"><!-- NOME DO JOGADOR --></span>
+                é a sua vez!<br />
+                Você escolhe <b>Verdade ou Desafio?</b>
+            </h2>
+            <button type="button" class="btn bt-verdade" id="btVerdade">
+                <i class="fa-solid fa-circle-question"></i> Verdade
+            </button>
+            <button type="button" class="btn bt-desafio" id="btDesafio">
+                <i class="fa-solid fa-puzzle-piece"></i> Desafio
+            </button>
+        </div>
+    </section>
+
+    <section class="sec-pergunta">
+        <div class="container">
+            <h2 class="sec-title"><!-- VERDADE OU DESAFIO SORTEADO APARECE AQUI --></h2>
+            <button type="button" class="btn bt-sortear" id="btSortear">
+                <i class="fa-solid fa-arrows-spin"></i> Girar a Garrafa Novamente
+            </button>
+        </div>
+    </section>
+
+    <div class="loading-animation" id="loading">
+        <i class="fa-solid fa-bottle-water"></i>
+    </div>
+
+    <section class="sec-share-btns">
+        <div class="container">
+            <h3 class="sec-title">Compartilhe com os seus amigos!</h3>
+            <div class="share-btns">
+                <a href="https://twitter.com/share?url=https://bernas11.github.io/" target="_blank" rel="noopener noreferrer" title="Compartilhar no Twitter">
+                    <i class="fa-brands fa-twitter fa-2x"></i>
+                </a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://bernas11.github.io/" target="_blank" rel="noopener noreferrer" title="Compartilhar no Facebook">
+                    <i class="fa-brands fa-facebook fa-2x"></i>
+                </a>
+                <a href="https://reddit.com/submit?url=bernas11.github.io/" target="_blank" rel="noopener noreferrer" title="Compartilhar no Reddit">
+                    <i class="fa-brands fa-reddit fa-2x"></i>
+                </a>
+                <a href="https://www.linkedin.com/shareArticle?url=bernas11.github.io/" target="_blank" rel="noopener noreferrer" title="Compartilhar no LinkedIn">
+                    <i class="fa-brands fa-linkedin fa-2x"></i>
+                </a>
+                <a href="mailto:?subject=&body=https://bernas11.github.io/" target="_blank" rel="noopener noreferrer" title="Compartilhar via E-mail">
+                    <i class="fa-solid fa-at fa-2x"></i>
+                </a>
+                <a href="https://wa.me/?text=https://bernas11.github.io/" target="_blank" rel="noopener noreferrer" title="Compartilhar via WhatsApp">
+                    <i class="fa-brands fa-whatsapp fa-2x"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="sec-footer">
+        <div class="container">
+            <p>&copy; 2022 - Desenvolvido por <a href="https://github.com/Bernas11" target="_blank" rel="noopener noreferrer">Bernardo Duarte</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="dist/js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="dist/js/plugins.min.js"></script>
+    <script src="dist/js/font-awesome.min.js" crossorigin="anonymous"></script>
+    <script src="dist/js/main.min.js"></script>
+</body>
+</html>
