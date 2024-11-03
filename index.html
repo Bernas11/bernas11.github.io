@@ -20,11 +20,6 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="dist/css/main.min.css">
-    <style>
-        .difficulty-selection label {
-            color: white; /* Cor do texto em branco */
-        }
-    </style>
 
     <!-- Theme Color -->
     <meta name="theme-color" content="#2c3e50">
@@ -72,8 +67,6 @@
             <div class="difficulty-selection">
                 <label for="facil">Fácil</label>
                 <input type="checkbox" id="facil" name="facil" value="facil">
-                <label for="medio">Médio</label>
-                <input type="checkbox" id="medio" name="medio" value="medio">
                 <label for="dificil">Difícil</label>
                 <input type="checkbox" id="dificil" name="dificil" value="dificil">
             </div>
@@ -87,7 +80,7 @@
         </div>
     </section>
 
-    <section class="sec-verdade-desafio" style="display: none;">
+    <section class="sec-verdade-desafio">
         <div class="container">
             <h2 class="sec-title">
                 <span id="playerName"><!-- NOME DO JOGADOR --></span>
@@ -103,7 +96,7 @@
         </div>
     </section>
 
-    <section class="sec-pergunta" style="display: none;">
+    <section class="sec-pergunta">
         <div class="container">
             <h2 class="sec-title"><!-- VERDADE OU DESAFIO SORTEADO APARECE AQUI --></h2>
             <button type="button" class="btn bt-sortear" id="btSortear">
@@ -112,7 +105,7 @@
         </div>
     </section>
 
-    <div class="loading-animation" id="loading" style="display: none;">
+    <div class="loading-animation" id="loading">
         <i class="fa-solid fa-bottle-water"></i>
     </div>
 
@@ -144,4 +137,14 @@
 
     <footer class="sec-footer">
         <div class="container">
-            <p>&copy; 2022 - Desenvolvido por <a href="https://github.com/Bernas11" target="_blank" rel="noopener noreferrer">Bernardo Duarte</a[_{{{CITATION{{{_1{](https://github.com/pedrolinsbr/ServerNode/tree/e89b5fa98ff30e0db2740a02cc17bcbf90c18276/src%2FmodTransportation%2Fcontrollers%2FMdfeController.js)[_{{{CITATION{{{_2{](https://github.com/florenciodaniel/efeitos/tree/7fbf8471e8004dba495d8fb9e5c378eadb1666a3/menu_bottom_fixo_top%2Findex.php)[_{{{CITATION{{{_3{](https://github.com/nadiyaid/Siber-Project-Indo-Ver/tree/5f6487d7f530ea07ff70649cd5601846e75ca7c5/task-admin.php)
+            <p>&copy; 2022 - Desenvolvido por <a href="https://github.com/Bernas11" target="_blank" rel="noopener noreferrer">Bernardo Duarte</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="dist/js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="dist/js/plugins.min.js"></script>
+    <script src="dist/js/font-awesome.min.js" crossorigin="anonymous"></script>
+    <script src="dist/js/main.min.js"></script>
+</body>
+</html>
